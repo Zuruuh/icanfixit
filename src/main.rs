@@ -113,7 +113,7 @@ async fn handle_message(_ctx: Context, message: Message) -> serenity::Result<()>
 
     let webhook = _ctx
         .http()
-        .get_guild_webhooks(guild_id)
+        .get_channel_webhooks(message.channel_id)
         .await?
         .into_iter()
         .find(|webhook| webhook.name.clone().unwrap_or_default() == WEBHOOK_ID);
