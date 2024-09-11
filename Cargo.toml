@@ -1,0 +1,16 @@
+[package]
+name = "icanfixit"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+regex = "1.10.6"
+serenity = { version = "0.12.2", default-features = false, features = [
+  "cache",
+  "client",
+  "gateway",
+  "rustls_backend",
+  "model",
+] }
+tokio = { version = "1.40.0", features = ["full"] }
+url = "2.5.2"
